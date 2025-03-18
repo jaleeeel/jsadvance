@@ -1,46 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Web Output</title>
-    <script defer src="script.js"></script>
+    <title>Javascript 1</title>
     <style>
-        table { width: 50%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid black; padding: 5px; text-align: center; }
-        .even { color: green; }
-        .odd { color: blue; }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
     </style>
 </head>
 <body>
-    <h2>Javascript Web Output #1</h2>
-    
-    <label>Insert any Positive Numbers:</label>
-    <input type="number" id="numberInput">
-    <button onclick="insertNumber()">Insert</button>
-    <button onclick="clearEntries()">Clear Entry</button>
-
-    <h3>Inserted Numbers</h3>
-    <table id="numbersTable">
+    <h1>Javascript Web Output #1</h1>
+    <table>
         <tr>
-            <th>Number</th>
-            <th>Type</th>
-            <th>Actions</th>
+            <td>
+                <label for="">Insert any Positive Numbers:</label>
+            </td>
+            <td>
+                <input type="text" id="txtNum">
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button id="btn1">Insert</button>
+                <button id="btn2">Clear</button>
+            </td>
         </tr>
     </table>
+    <br>
+    <fieldset>
+        <legend>Inserted Numbers</legend>
+        <table id="tblNumbers">
+        </table>
+        
+    </fieldset>
 
-    <p><strong>HIGHEST:</strong> <span id="highest">-</span></p>
-    <p><strong>LOWEST:</strong> <span id="lowest">-</span></p>
-
-    <button onclick="clearItems()">Clear Items</button>
-    <button onclick="getTotal()">Get Total</button>
-    <button onclick="identifyHighLow()">Identify Highest and Lowest Number</button>
-
-    <label>Sort by:</label>
-    <select id="sortOrder" onchange="sortNumbers()">
+    <button id="btn3" style="margin-top: 10px;">Clear Items</button>
+    <button id="btn4" style="margin-top: 10px; display: none;">Get Total</button>
+    <button id="identifyHighLow" style="margin-top: 10px; display: none;">Identify Highest and Lowest Number</button>
+    <label style="margin-top: 10px; display: none;">Sort by:</label>
+    <select id="sortOrder" style="margin-top: 10px; display: none;" onchange="sortNumbers()">
         <option value="">Please select</option>
         <option value="asc">Ascending</option>
         <option value="desc">Descending</option>
     </select>
+    <script src="main.js"></script>
 </body>
 </html>
